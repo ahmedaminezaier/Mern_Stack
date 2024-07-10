@@ -18,3 +18,4 @@ class Ninja {
         this.health += 10;
         console.log(`${this.name} drank a sake and gained 10 health points`);
     }
+}
