@@ -44,8 +44,8 @@ var food = 'gone';
 var food = 'chicken';
 eat();
 food = 'half-chicken';
+console.log(food);
 var food = 'gone';
-console.log(food);// logs chicken
 
 //version 2
 var food = 'chicken';
@@ -59,11 +59,11 @@ mean();
 console.log(food);
 var mean = function() {
 food = "chicken";
-console.log(food);
-var food = "fish";
+console.log(food);///output : chicken
+var food = "fish"; /// output : fish
 console.log(food);
 }
-console.log(food);
+console.log(food); ///ouutput : error
 ///
 ///
 var food ="fish";
@@ -74,13 +74,16 @@ console.log(food); // logs= error
 console.log(genre);
 var genre = "disco";
 rewind();
+console.log(genre);///undefined
+var genre = "disco";
+rewind();
 function rewind() {
 genre = "rock";
-console.log(genre);
+console.log(genre);/// rock
 var genre = "r&b";
-console.log(genre);
+console.log(genre); /// r&b
 }
-console.log(genre);
+console.log(genre); /// disco
 
 var genre = "disco";
 var genre = "rock";
@@ -91,15 +94,15 @@ console.log(genre);// logs rock r&b disco
 ///example 7
 
 dojo = "san jose";
-console.log(dojo);
+console.log(dojo);/// san jose
 learn();
 function learn() {
-dojo = "seattle";
-console.log(dojo);
+dojo = "seattle"; 
+console.log(dojo); /// seattle
 var dojo = "burbank";
-console.log(dojo);
+console.log(dojo); //// burbank
 }
-console.log(dojo);
+console.log(dojo); /// san jose
 ////
 var dojo = "burbank";
 learn();
@@ -107,7 +110,6 @@ dojo = "seattle";
 dojo = "san jose";
 console.log(dojo);/// logs :san jose ,seattle ,burbank ,san jose
 
-///example 8    
 
 
 
