@@ -110,6 +110,37 @@ dojo = "seattle";
 dojo = "san jose";
 console.log(dojo);/// logs :san jose ,seattle ,burbank ,san jose
 
+///example 8
+
+console.log(makeDojo("Chicago", 65)); ///{name : Chicago, age :  65, hiring : true}
+console.log(makeDojo("Berkeley", 0)); /// error
+function makeDojo(name, students){
+    const dojo = {};
+    dojo.name = name;
+    dojo.students = students;
+    if(dojo.students > 50){
+        dojo.hiring = true;
+    }
+    else if(dojo.students <= 0){
+        dojo = "closed for now";
+    }
+    return dojo;
+}
+////////solution of it : 
+console.log(makeDojo("Chicago", 65)); ///{name : Chicago, age :  65, hiring : true}
+console.log(makeDojo("Berkeley", 0)); /// closed for now
+function makeDojo(name, students){
+    let dojo = {};
+    dojo.name = name;
+    dojo.students = students;
+    if(dojo.students > 50){
+        dojo.hiring = true;
+    }
+    else if(dojo.students <= 0){
+        dojo = "closed for now";
+    }
+    return dojo;
+}
 
 
 
