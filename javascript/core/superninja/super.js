@@ -22,7 +22,7 @@ class Ninja {
 
 class Sensei extends Ninja {
     constructor(name, health=200,strength=10,wisdom=10) {
-        super(name,health,strength,wisdom);
+        super(name,health,strength);
         this.wisdom = wisdom;
     }
 
