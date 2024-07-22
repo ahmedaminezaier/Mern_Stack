@@ -9,7 +9,7 @@ const birthdayclick = () => {
 
   return (
     <div>
-      <h2>{lastName}, {firstName}</h2>
+      <h1>{lastName}, {firstName}</h1>
       <p>Age: {currentAge}</p>
       <p>Hair Color: {hairColor}</p>
       <button onClick={birthdayclick}>
