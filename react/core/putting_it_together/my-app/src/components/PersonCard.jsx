@@ -3,7 +3,7 @@ import react,{useState} from "react";
 const PersonCard = (props) => {
 const {firstName,lastName , age, hairColor} = props;
 const [currentAge, setcurrentage] = useState(age);
-const birthdayclick = () => {
+const handleclick = () => {
     setcurrentage(currentAge + 1);
   };
 
@@ -12,7 +12,7 @@ const birthdayclick = () => {
       <h1>{lastName}, {firstName}</h1>
       <p>Age: {currentAge}</p>
       <p>Hair Color: {hairColor}</p>
-      <button onClick={birthdayclick}>
+      <button onClick={handleclick}>
         Birthday Button for {firstName} {lastName}
       </button>
     </div>
