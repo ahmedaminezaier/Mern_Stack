@@ -18,7 +18,7 @@ const Form = (props) => {
             confirmPassword: confirmPassword
         };
         console.log('Form Data:', formData);
-        // Handle form data as needed
+        
     };
 
     return (
