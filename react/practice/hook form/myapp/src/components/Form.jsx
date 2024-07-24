@@ -1,91 +1,51 @@
 import React, { useState } from 'react';
 import style from "./Formuser.module.css";
 
-function Form() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  });
+const Form = (props) => {
+  const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: password,
+            confirmPassword: confirmPassword
+        };
+        console.log('Form Data:', formData);
+        // Handle form data as needed
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form data:', formData);
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>First Name:</label>
-        <input
-          type="text"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-          style={style.input}
-        />
-      </div>
-      <div>
-        <label>Last Name:</label>
-        <input
-          type="text"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-          style={style.input}
-        />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          style={style.input}
-        />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          style={style.input}
-        />
-      </div>
-      <div>
-        <label>Confirm Password:</label>
-        <input
-          type="password"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          style={style.input}
-        />
-      </div>
-      <button type="submit">Submit</button>
-      <div>
-        <h2>Your Form Data</h2>
-        <p>First Name: {formData.firstName}</p>
-        <p>Last Name: {formData.lastName}</p>
-        <p>Email: {formData.email}</p>
-        <p>Password: {formData.password}</p>
-        <p>Confirm Password: {formData.confirmPassword}</p>
-      </div>
-    </form>
-  );
-}
+    return (
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label>First Name: </label>
+                <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            </div>
+            <div>
+                <label>Last Name: </label>
+                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+            </div>
+            <div>
+                <label>Email: </label>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div>
+            <div>
+                <label>Password: </label>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            </div>
+            <div>
+                <label>Confirm Password: </label>
+                <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    );
+};
 
 export default Form;
