@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from "./Formuser.module.css";
 
-const Form = (props) => {
+const FormUser = (props) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -57,5 +57,5 @@ const Form = (props) => {
     );
   };
   
-  export default Form;
+  export default FormUser;
   
