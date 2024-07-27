@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import style from "./Formuser.module.css";
+import styleS from "./Formuser.module.css";
 
 const FormUser = (props) => {
     const [firstName, setFirstName] = useState('');
