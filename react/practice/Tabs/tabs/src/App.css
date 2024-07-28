@@ -1,0 +1,35 @@
+.App {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.tab-headers {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-headers button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background-color: white;
+  cursor: pointer;
+  margin-right: -1px; /* Ensures no double border between buttons */
+  transition: background-color 0.3s ease;
+}
+
+.tab-headers button:hover {
+  background-color: #f0f0f0;
+}
+
+.tab-headers .active {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
